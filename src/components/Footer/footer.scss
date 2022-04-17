@@ -1,0 +1,61 @@
+@use 'src/styles/vars';
+
+// footer menu
+.nav {
+  // position: relative;
+  // bottom: 0;
+  @media(max-width: 600px){
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: 3.5em;
+  }
+
+  &-item {
+    display: inline-block;  
+    padding: 1rem;
+    padding-left: 2rem;
+    color: vars.$black;
+    transition: font-size 0.3s;
+    @media(max-width:600px){
+      padding: 0em;
+      margin-bottom: 0.5rem;
+    }
+
+    &--active {
+      color: vars.$orange;
+      transform:scale(1.25)
+    }
+
+    &:hover {
+      color: vars.$orange;
+      // transform:scale(1.25)
+      font-size: 20px;
+    }
+  }
+}
+
+// footer navbar
+.nav-mobile{
+  @media (min-width: 600px){
+    display: none;
+  }
+
+  width: 100%;
+  height: 4em;
+  border-top: 0.5px solid vars.$green;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  background-color: white;
+    
+  .nav-item{
+     display: flex;
+     align-items: center;
+     align-self: flex-end;
+     flex-direction: column;
+     margin-bottom: 0.5em;
+  }
+}
